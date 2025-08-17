@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Now</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Weather Now</h1>
+    <div class="unit-toggle">
+      <button id="unitMetric" class="active">°C</button>
+      <button id="unitImperial">°F</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <button id="useMyLocation" class="btn">Use My Location</button>
+
+      <form id="cityForm" class="city-form" autocomplete="off">
+        <input id="cityInput" type="text" placeholder="Enter city (e.g., Mumbai)" />
+        <button class="btn" type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="status" class="status" role="status" aria-live="polite"></section>
+
+    <section id="weatherCard" class="card hidden" aria-hidden="true">
+      <div class="card-header">
+        <div class="place">
+          <h2 id="placeName">—</h2>
+          <p id="timestamp">—</p>
+        </div>
+        <div class="temp">
+          <img id="icon" alt="Weather icon" />
+          <span id="temperature">—</span>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="row">
+          <div><small>Condition</small><p id="condition">—</p></div>
+          <div><small>Feels like</small><p id="feelsLike">—</p></div>
+          <div><small>Humidity</small><p id="humidity">—</p></div>
+          <div><small>Wind</small><p id="wind">—</p></div>
+        </div>
+        <div class="row">
+          <div><small>Clouds</small><p id="clouds">—</p></div>
+          <div><small>Pressure</small><p id="pressure">—</p></div>
+          <div><small>Sunrise</small><p id="sunrise">—</p></div>
+          <div><small>Sunset</small><p id="sunset">—</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Powered by OpenWeatherMap • Demo app</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
